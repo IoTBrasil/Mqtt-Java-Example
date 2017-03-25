@@ -14,7 +14,7 @@ public class MQTTConnect {
     private static final String DOMAIN = "<Insert m2m.io domain here>";
     private static final String USERNAME = "guest";
     private static final String PASSWORD = "guest";
-    
+
     public MqttClient connect(MqttCallback callback) throws MqttException {
         MqttConnectOptions connOpt = new MqttConnectOptions();
 

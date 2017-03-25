@@ -21,12 +21,11 @@ public class MQTTSubscriber implements MqttCallback {
     }
 
     public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {
-
+        throw new RuntimeException("Should not receive any message.");
     }
 
     public void subscribe(MqttClient mqttClient, String topicDescription) throws MqttException {
         int subQoS = 0;
-        System.out.println(topicDescription);
         mqttClient.subscribe(topicDescription, subQoS);
     }
 }
